@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(190deg, #aaffff, #f2f0e6)no-repeat;
+  background-attachment: fixed;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #465E7A;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.topnav a.navs {
+  padding: 30px 20px 30px 20px;
+  font-size: 40px;
+  float: right; /* Adjust the font size as needed */
+}
+
+.navs a:hover{
+  background-color: #B1B1B1;
+}
+
+.content {
+  padding-top: 400px; 
+  padding-left: 50px;
+  color: #005889;
+  font-size: 20px;
+
+  text-decoration-color: #C3C3C3; 
+}
+
+.content img{
+  float: right;
+  padding-left: 100px: 
+}
+.content a{
+   border-radius: 25px;
+  background: #0033FC;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+   text-decoration: none;
+   color: white;
+}
+
+.content .linksred{
+  border-radius: 25px;
+  background: #FC2A00;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+   text-decoration: none;
+   color: white;
+}
+.links{
+  font-size: 25px;
+}
+
+
+
+
+
+/*2nd LAYER*/
+
+
+
+.skill-container {
+            width: 300px;
+            background: black;
+            margin-top: 330px;
+            color:white ;
+            border-radius: 25px;
+            padding: 10px 110px 20px 20px;
+             position: absolute;
+  left: 40%;
+        }
+.skill {
+ margin-bottom: 15px;
+text-align: left;
+        }
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+        }
+
+.skill-bar {
+  width: 100%;
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid #ccc;
+  padding-right: 90px; 
+        }
+
+.skill-progress {
+  height: 100%;
+  border-radius: 7px; 
+  background-color: #2DD0D8;
+  text-align: center;
+  line-height: 20px; 
+  color: #fff;
+        }
+
+.black{
+  color: #B6DEF6;
+  text-align: center;
+  background: #0066A1 ;
+  border-radius: 7px;
+  width: 130%;
+  
+}
+
+
+
+/*3rd layer*/
+
+
+
+table, th, td {
+  border:1px solid black;
+  margin-top: 800px;
+  margin-left: 15%;
+}
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="#home-section"><img src="logo.png" height="76.3" width="150"></a>
+  <div class="navs">
+ 
+  <a class="navs" href="#personal-projects"><i class="fa fa-fw fa-file"></i> Personal Projects   </a>
+  
+  <a class="navs" href="#home-section"><i class="fa fa-fw fa-home"></i>Home  |</a>
+ 
+  
+  
+  </div>
+</div>
+
+<div class="content" id="home-section">
+<img src="me.png" style="position: absolute; left: 950px; top: 250px;"height="700" width="900">
+<h2>A Pleasant Greetings</h2>
+<h1>I am Jose Raphael T. Quiambao</h1>
+<h2>Website Developer, UI/UX designer</h2>
+<br>
+
+</div>
+
+
+
+<!--2nd layer-->
+
+
+
+
+
+<div class="skill-container">
+
+  <h1 class="black">Skill Checklist</h1>
+    <div class="skill">
+        <div class="skill-name">HTML</div>
+        <div class="skill-bar">
+            <div class="skill-progress" style="width: 110%;">80%</div>
+        </div>
+    </div>
+    
+    <div class="skill">
+        <div class="skill-name">CSS</div>
+        <div class="skill-bar">
+            <div class="skill-progress" style="width: 100%;">70%</div>
+        </div>
+    </div>
+    
+    <div class="skill">
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%;">60%</div>
+        </div>
+    </div>
+</div>
+
+
+<!--3rd Layer-->
+
+
+
+<table style="width:70%" id="personal-projects">
+  <tr>
+    <th>Description</th>
+    <th>Screenshot/Link</th>
+    
+  </tr>
+  <tr>
+    <td>
+      <b>Vonshon</b>
+      <br>
+      <p>Vonshon is a website in which our users could freely order a meal with a tap of their finger tips, as they select their orders they would most likely get their order number, we utilize spreadsheet, google drive and bitbucket. We also used HTML, CSS, Google Forms and Javascript in this project. In this project I have colaborated with C. Maniago, A. Serrano, K. Malong and F. Estanislao.</p>
+    </td>
+    <td><img src="vonshon.png" height="450" width="600"><br>Link: <a href="https://vonshon.bitbucket.io/" target="_blank">Vonshon</a></td>
+   
+  </tr>
+  <tr>
+    <td>
+      <b>Doshermana Shop</b>
+      <p>Doshermana is a website in which users could order online to deliver the products to their household or location, we utilize google analytics and wordpress, the products are mostly caffine drinks and pastry. I conducted this project with A. Gomez, I. Lovino and A. Serrano.</p>
+
+    </td>
+    <td><img src="dosh.png" height="450" width="600"><br>Link: <a href="https://doshermana.shop/" target="_blank">Doshermana</a></td>
+  
+  </tr>
+
+  <tr>
+    <td>
+      <b>Forever Dream</b>
+      <p>Forever dream is a website top down rpg game soon to be released, there is a built in programming language and provides template that we could utilize, this project is conducted alongside A. Serrano and C. Maniago.</p>
+
+    </td>
+    <td><img src="fd.png" height="450" width="600"><br>(Ongoing)</td>
+  
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+<footer>
+  <p></p>
+</footer>
+
+</body>
+</html>
