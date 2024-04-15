@@ -1,282 +1,322 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(190deg, #aaffff, #f2f0e6)no-repeat;
-  background-attachment: fixed;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-.topnav {
-  overflow: hidden;
-  background-color: #465E7A;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
+    .topnav {
+      background-color: #2980b9;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      animation: slideIn 1s forwards;
+    }
 
-.topnav a {
-  float: left;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-  padding-top: 20px;
-}
+    @keyframes slideIn {
+      0% {
+        top: -50px;
+      }
+      100% {
+        top: 0;
+      }
+    }
 
-.topnav a.navs {
-  padding: 30px 20px 30px 20px;
-  font-size: 30px;
-  float: right; 
-  /* Adjust the font size as needed */
-}
+    .topnav a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+      transition: background-color 0.3s;
+    }
 
-.navs a:hover{
-  background-color: #B1B1B1;
-}
+    .topnav .navs {
+      float: right;
+      margin-top:0.65%;
+    }
 
-.content {
-  padding-top: 300px; 
-  padding-left: 50px;
-  color: #005889;
-  font-size: 20px;
+   
 
-  text-decoration-color: #C3C3C3; 
-}
+    .content {
+      padding: 180px 20px 20px;
+      text-align: center;
+    }
 
-.imgko{
-  border-radius: 100px;
-}
-.content a{
-   border-radius: 25px;
-  background: #0033FC;
-  padding: 20px; 
-  width: 200px;
-  height: 150px;  
-   text-decoration: none;
-   color: white;
-}
+    .profile-img {
+      border-radius: 50%;
+      max-width: 200px;
+      border: 5px solid #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s forwards;
+    }
 
-.content .linksred{
-  border-radius: 25px;
-  background: #FC2A00;
-  padding: 20px; 
-  width: 200px;
-  height: 150px;  
-   text-decoration: none;
-   color: white;
-}
-.links{
-  font-size: 25px;
-}
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
 
+    h1, h2, h3 {
+      color: #2980b9;
+    }
 
+    .skill-container {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #2980b9;
+    }
 
+    .skill-bar {
+      background-color: #eee;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      height: 30px; /* Adjusted height */
+    }
 
-/*2nd LAYER*/
+    .skill-progress {
+      background-color: #2980b9;
+      color: white;
+      text-align: center;
+      padding: 5px 0;
+      width: 0;
+      transition: width 1s ease-in-out;
+    }
 
+    .skill-bar:hover .skill-progress {
+      animation: progressBarAnimation 2s forwards;
+    }
 
+    @keyframes progressBarAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
 
-.skill-container {
-            width: 300px;
-            background: black;
-            margin-top: 330px;
-            color:white ;
-            border-radius: 25px;
-            padding: 10px 110px 20px 20px;
-             position: absolute;
-  left: 40%;
-        }
-.skill {
- margin-bottom: 15px;
-text-align: left;
-        }
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
 
-.skill-name {
-  font-weight: bold;
-  margin-bottom: 5px;
-        }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+    }
 
-.skill-bar {
-  width: 100%;
-  background-color: #ddd;
-  height: 20px;
-  border-radius: 10px;
-  position: relative;
-  border: 1px solid #ccc;
-  padding-right: 90px; 
-        }
+    th {
+      background-color: #2980b9;
+      color: white;
+    }
 
-.skill-progress {
-  height: 100%;
-  border-radius: 7px; 
-  background-color: #2DD0D8;
-  text-align: center;
-  line-height: 20px; 
-  color: #fff;
-        }
+    footer {
+      background-color: #2980b9;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
 
-.black{
-  color: #B6DEF6;
-  text-align: center;
-  background: #0066A1 ;
-  border-radius: 7px;
-  width: 130%;
-  
-}
+    /* Additional styles for the Certificates and Experiences sections */
+    .certificates-container,
+    .experiences-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+    }
 
+    .certificates-container h2,
+    .experiences-container h2 {
+      color: #2980b9;
+      margin-bottom: 10px;
+    }
 
+    .certificates-list,
+    .experiences-list {
+      list-style-type: none;
+      padding: 0;
+    }
 
-/*3rd layer*/
+    .certificates-list li,
+    .experiences-list li {
+      margin-bottom: 10px;
+    }
 
+    .certificates-list li:last-child,
+    .experiences-list li:last-child {
+      margin-bottom: 0;
+    }
 
-
-table, th, td {
-  border:1px solid black;
-  margin-top: 800px;
-  margin-left: 15%;
-}
-
-
-
-
-/*FOOTER*/
-
-footer{
-  background-color: #550B6B;
-  color: white;
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-
-
-
-</style>
+  </style>
 </head>
 <body>
 
 <div class="topnav">
-  <a href="#home-section"><img src="logo.png" height="50.3" width="120"></a>
+  <a href="#home-section"><img src="logo.png" height="50" width="70" alt="Logo"></a>
   <div class="navs">
-  <a class="navs" href="#footer-section"><i class="fa fa-fw fa-phone"></i>Contacts  </a>
- 
-  <a class="navs" href="#personal-projects"><i class="fa fa-fw fa-file"></i> Personal Projects   |</a>
-  
-  <a class="navs" href="#home-section"><i class="fa fa-fw fa-home"></i>Home  |</a>
-
-
- 
-  
-  
+    <a class="navs" href="#personal-projects">Personal Projects</a>
+    <a class="navs" href="#footer-section">Contacts</a>
+    <a class="navs" href="#home-section">Home</a>
+    
+    
   </div>
 </div>
 
 <div class="content" id="home-section">
-<img class = "imgko"src="me.png" style="position: absolute; left:50%; top: 250px;"height="500" width="700">
-<h2>A Pleasant Greetings</h2>
-<h1>I am Jose Raphael T. Quiambao</h1>
-<h2>Website Developer, UI/UX designer 
-  <br>
-  <br>I am currently studying at Holy Angel University, 
-    <br>developing my skills through the course of Bachelor of 
-    <br>Science Information Technology Specialized 
-    <br>in Website Development (BSIT-Web Dev).</h2>
-<br>
-
+  <img class="profile-img" src="me.png" alt="Profile Picture">
+  <h1>A Pleasant Greetings</h1>
+  <h2>I am Jose Raphael T. Quiambao</h2>
+  <p>Website Developer, UI/UX designer<br>
+     I am currently studying at Holy Angel University, 
+     developing my skills through the course of Bachelor of 
+     Science Information Technology Specialized 
+     in Website Development (BSIT-Web Dev).
+  </p>
 </div>
-
-
-
-<!--2nd layer-->
-
-
-
-
 
 <div class="skill-container">
+  <h2>Skill Checklist</h2>
+  <div class="skill" id="skill-html">
+    <div class="skill-name">HTML</div>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 80%;">80%</div>
+    </div>
+  </div>
+  <div class="skill" id="skill-python">
+    <div class="skill-name">Python</div>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 75%;">75%</div>
+    </div>
+  </div>
+  <div class="skill" id="skill-css">
+    <div class="skill-name">CSS</div>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 70%;">70%</div>
+    </div>
+  </div>
+  <div class="skill" id="skill-php">
+    <div class="skill-name">PHP</div>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 60%;">60%</div>
+    </div>
+  </div>
+  <div class="skill" id="skill-javascript">
+    <div class="skill-name">JavaScript</div>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 60%;">60%</div>
+    </div>
+  </div>
+  <div class="skill" id="skill-java">
+    <div class="skill-name">Java</div>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 50%;">50%</div>
+    </div>
+  </div>
+  <div class="skill" id="skill-nodejs">
+    <div class="skill-name">Node.js</div>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 40%;">40%</div>
+    </div>
+  </div>
+</div>
 
-  <h1 class="black">Skill Checklist</h1>
-    <div class="skill">
-        <div class="skill-name">HTML</div>
-        <div class="skill-bar">
-            <div class="skill-progress" style="width: 110%;">80%</div>
-        </div>
-    </div>
-    
-    <div class="skill">
-        <div class="skill-name">CSS</div>
-        <div class="skill-bar">
-            <div class="skill-progress" style="width: 100%;">70%</div>
-        </div>
-    </div>
-    
-    <div class="skill">
-        <div class="skill-name">JavaScript</div>
-        <div class="skill-bar">
-            <div class="skill-progress" style="width: 90%;">60%</div>
-        </div>
-    </div>
+<div class="certificates-container">
+  <h2>Certificates</h2>
+  <ul class="certificates-list">
+    <li>INTRODUCTION TO IOT - 2021, Cisco Networking Academy</li>
+    <li>INTRODUCTION TO CYBERSECURITY - 2021, Cisco Networking Academy</li>
+    <li>Linux Fundamentals - 2021, Tryhackme</li>
+    <li>Windows Fundamentals - 2021, Tryhackme</li>
+    <li>REDHAT ACADEMY - 2022, Red Hat Academy</li>
+    <li>CCNA INTRODUCTION TO NETWORKS - 2022, Cisco Networking Academy</li>
+  </ul>
+</div>
+
+<div class="experiences-container">
+  <h2>Experiences</h2>
+  <ul class="experiences-list">
+    <li>Discord Bot Developer, Discord, 2020-2022</li>
+    <li>Role Playing Game Designer, RpgPlayGround, 2020-Current</li>
+    <li>Website Designer, 2020-Current</li>
+  </ul>
 </div>
 
 
-<!--3rd Layer-->
-
-
-
-<table style="width:70%" id="personal-projects">
+<table>
   <tr>
     <th>Description</th>
     <th>Screenshot/Link</th>
-    
   </tr>
   <tr>
     <td>
       <b>Vonshon</b>
-      <br>
-      <p>Vonshon is a website in which our users could freely order a meal with a tap of their finger tips, as they select their orders they would most likely get their order number, we utilize spreadsheet, google drive and bitbucket. We also used HTML, CSS, Google Forms and Javascript in this project. In this project I have colaborated with C. Maniago, A. Serrano, K. Malong and F. Estanislao.</p>
+      <p>Vonshon is a website where users can order meals online. We utilized HTML, CSS, Google Forms, and JavaScript in this project.</p>
     </td>
-    <td><img src="vonshon.png" height="450" width="600"><br>Link: <a href="https://vonshon.bitbucket.io/" target="_blank">Vonshon</a></td>
-   
+    <td>
+      <img src="vonshon.png" alt="Vonshon Screenshot" height="150" width="200"><br>
+      <a href="https://vonshon.bitbucket.io/" target="_blank">Vonshon</a>
+    </td>
   </tr>
   <tr>
     <td>
       <b>Doshermana Shop</b>
-      <p>Doshermana is a website in which users could order online to deliver the products to their household or location, we utilize google analytics and wordpress, the products are mostly caffine drinks and pastry. I conducted this project with A. Gomez, I. Lovino and A. Serrano.</p>
-
+      <p>Doshermana is an online shop where users can order caffeinated drinks and pastries. We utilized Google Analytics and WordPress.</p>
     </td>
-    <td><img src="dosh.png" height="450" width="600"><br>Link: <a href="https://doshermana.shop/" target="_blank">Doshermana</a></td>
-  
+    <td>
+      <img src="dosh.png" alt="Doshermana Screenshot" height="150" width="200"><br>
+      <a href="https://doshermana.shop/" target="_blank">Doshermana</a>
+    </td>
   </tr>
-
   <tr>
     <td>
       <b>Forever Dream</b>
-      <p>Forever dream is a website top down rpg game soon to be released, there is a built in programming language and provides template that we could utilize, this project is conducted alongside A. Serrano and C. Maniago.</p>
-
+      <p>Forever Dream is an ongoing project, a top-down RPG game with built-in programming language and templates.</p>
     </td>
-    <td><img src="fd.png" height="450" width="600"><br>(Ongoing)</td>
-  
+    <td>
+      <img src="fd.png" alt="Forever Dream Screenshot" height="150" width="200"><br>
+      (Ongoing)
+    </td>
   </tr>
 </table>
 
 
 
-
-
-
-
-
 <footer id="footer-section">
-  <h1><u>CONTACTS</u></h1>
-  <p>Contact Number: <u>63+ 927 045 5199</u></p>
+  <h4>CONTACTS</h4>
+  <p>Contact Number: <u>+63 927 045 5199</u></p>
   <p>Email: <u>joserquiambao@gmail.com</u></p>
   <p>Address: <u>Panipuan, San Fernando, Pampanga</u></p>
 </footer>
